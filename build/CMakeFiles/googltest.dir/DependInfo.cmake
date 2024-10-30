@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ivan-pro/Рабочий стол/lab4/googltest.cpp" "CMakeFiles/googltest.dir/googltest.cpp.o" "gcc" "CMakeFiles/googltest.dir/googltest.cpp.o.d"
+  "C:/lab4/googltest.cpp" "CMakeFiles/googltest.dir/googltest.cpp.obj" "gcc" "CMakeFiles/googltest.dir/googltest.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

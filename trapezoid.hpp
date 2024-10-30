@@ -1,6 +1,6 @@
 #pragma once
 #include "figure.hpp"
-
+#include <limits>
 template <Scalar T>
 class Trapezoid : public Figure<T> {
     T base1, base2, height;
@@ -26,9 +26,22 @@ public:
 
     void read(std::istream& is) override {
         std::cout << "Enter lengths of base1, base2, and height of trapezoid: ";
-        is >> base1 >> base2 >> height;
+        while (!(is >> base1 >> base2 >> height)) {
+            std::cout << "Invalid input. Please enter numbers for base1, base2, and height: ";
+            is.clear();
+            is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+    
         std::cout << "Enter center x and y coordinates of trapezoid: ";
-        is >> center_point->x >> center_point->y;
+        while (!(is >> center_point->x >> center_point->y)) {
+            std::cout << "Invalid input. Please enter numbers for x and y coordinates: ";
+            is.clear();
+            is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
     }
+    void print() const override {
+    write(std::cout);
+    std::cout << std::endl;
+}
 };
 

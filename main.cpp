@@ -48,9 +48,10 @@ void deleteFigure(Array<std::shared_ptr<Figure<double>>>& figures) {
     std::size_t index;
     std::cout << "Enter the index of the figure to delete: ";
     while (!(std::cin >> index) || index >= figures.getSize()) {
-        std::cout << "Invalid index. Please enter a valid number: ";
+        std::cout << "Invalid input. Returning to main menu\n";
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        return;
     }
     figures.remove(index);
     std::cout << "Figure at index " << index << " deleted.\n";

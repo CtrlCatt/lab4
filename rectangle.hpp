@@ -1,6 +1,6 @@
 #pragma once
 #include "figure.hpp"
-
+#include <limits>
 template <Scalar T>
 class Rectangle : public Figure<T> {
     T width, height;
@@ -25,9 +25,23 @@ public:
 
     void read(std::istream& is) override {
         std::cout << "Enter width and height of rectangle: ";
-        is >> width >> height;
+        while (!(is >> width >> height)) {
+            std::cout << "Invalid input. Please enter numbers for width and height: ";
+            is.clear();
+            is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+    
         std::cout << "Enter center x and y coordinates of rectangle: ";
-        is >> center_point->x >> center_point->y;
+        while (!(is >> center_point->x >> center_point->y)) {
+            std::cout << "Invalid input. Please enter numbers for x and y coordinates: ";
+            is.clear();
+            is.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+    }
+
+    void print() const override {
+        write(std::cout);
+        std::cout << std::endl;
     }
 };
 

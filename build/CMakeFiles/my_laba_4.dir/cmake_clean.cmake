@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/my_laba_4.dir/main.cpp.o"
-  "CMakeFiles/my_laba_4.dir/main.cpp.o.d"
-  "my_laba_4"
+  "CMakeFiles/my_laba_4.dir/main.cpp.obj"
+  "CMakeFiles/my_laba_4.dir/main.cpp.obj.d"
+  "libmy_laba_4.dll.a"
+  "my_laba_4.exe"
+  "my_laba_4.exe.manifest"
   "my_laba_4.pdb"
 )
 

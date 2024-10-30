@@ -3,11 +3,15 @@
 #include <memory>
 #include <iostream>
 
+
 template <Scalar T>
 class Figure {
 public:
     virtual T area() const = 0;
     virtual Point<T> center() const = 0;
+    
+    virtual void read(std::istream& is) = 0;
+    virtual void write(std::ostream& os) const = 0;
     virtual void print() const = 0;
     virtual ~Figure() = default;
 };
