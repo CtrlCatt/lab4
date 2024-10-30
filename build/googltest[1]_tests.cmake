@@ -1,0 +1,7 @@
+add_test([=[ArrayTest.AddAndArea]=]  [==[/home/ivan-pro/Рабочий стол/lab4/build/googltest]==] [==[--gtest_filter=ArrayTest.AddAndArea]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ArrayTest.AddAndArea]=]  PROPERTIES WORKING_DIRECTORY [==[/home/ivan-pro/Рабочий стол/lab4/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[ArrayTest.RemoveFigure]=]  [==[/home/ivan-pro/Рабочий стол/lab4/build/googltest]==] [==[--gtest_filter=ArrayTest.RemoveFigure]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ArrayTest.RemoveFigure]=]  PROPERTIES WORKING_DIRECTORY [==[/home/ivan-pro/Рабочий стол/lab4/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[ArrayTest.ResizeTest]=]  [==[/home/ivan-pro/Рабочий стол/lab4/build/googltest]==] [==[--gtest_filter=ArrayTest.ResizeTest]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[ArrayTest.ResizeTest]=]  PROPERTIES WORKING_DIRECTORY [==[/home/ivan-pro/Рабочий стол/lab4/build]==] SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  googltest_TESTS ArrayTest.AddAndArea ArrayTest.RemoveFigure ArrayTest.ResizeTest)
